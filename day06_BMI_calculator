@@ -1,0 +1,21 @@
+# Day 6: BMI Calculator
+
+# Input weight in kilograms and height in meters
+weight = float(input("Enter weight in kg: "))
+height = float(input("Enter height in meters: "))
+
+# Calculate BMI using formula: weight / (height * height)
+bmi = weight / (height ** 2)
+
+# Display calculated BMI rounded to 2 decimal places
+print(f"\nYour BMI is: {bmi:.2f}")
+
+# Categorize based on standard health guidelines
+if bmi < 18.5:
+    print("Category: Underweight")
+elif 18.5 <= bmi < 25:
+    print("Category: Normal weight")
+elif 25 <= bmi < 30:
+    print("Category: Overweight")
+else:
+    print("Category: Obese")
