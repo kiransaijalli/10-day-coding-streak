@@ -1,0 +1,15 @@
+# Day 8: finding strong number
+import math
+
+def is_strong_number(n):
+    # Calculate the sum of factorials of each digit
+    digit_sum = sum(math.factorial(int(digit)) for digit in str(n))
+    return digit_sum == n
+
+# Main program
+num = int(input("Enter a number: "))
+
+if is_strong_number(num):
+    print(f"{num} is a Strong Number!")
+else:
+    print(f"{num} is NOT a Strong Number.")
